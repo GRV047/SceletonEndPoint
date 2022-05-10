@@ -1,0 +1,38 @@
+{
+  "name": "structureendpoint",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "NODE_ENV=development & nodemon bin/app.js",
+    "dev": "cross-env NODE_ENV=development nodemon src/bin/www.js",
+    "prod": "cross-env NODE_ENV=production nodemon --max-old-space-size=8000 src/bin/www.js",
+    "pm2-start": "pm2 kill && NODE_ENV=production pm2 start src/bin/www.js --watch",
+    "test": "mocha **/*.test.js",
+    "lint": "eslint --init",
+    "test-watch": "nodemon --exec 'npm test' "
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Gourav047/structureEndpoint.git"
+  },
+  "author": "Gourav",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Gourav047/structureEndpoint/issues"
+  },
+  "homepage": "https://github.com/Gourav047/structureEndpoint#readme",
+  "dependencies": {
+    "bcrypt": "^5.0.1",
+    "cors": "^2.8.5",
+    "dotenv": "^16.0.0",
+    "express": "^4.18.1",
+    "joi": "^17.6.0",
+    "jsonwebtoken": "^8.5.1",
+    "mongoose": "^6.3.2",
+    "reflect-metadata": "^0.1.13"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.16"
+  }
+}
