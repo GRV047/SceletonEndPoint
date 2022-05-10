@@ -18,10 +18,7 @@
   },
   "author": "Gourav",
   "license": "MIT",
-  "bugs": {
-    "url": "https://github.com/Gourav047/structureEndpoint/issues"
-  },
-  "homepage": "https://github.com/Gourav047/structureEndpoint#readme",
+  "homepage": "",
   "dependencies": {
     "bcrypt": "^5.0.1",
     "cors": "^2.8.5",
