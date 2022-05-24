@@ -34,6 +34,7 @@ module.exports.login = async (req, res, next) => {
 
 module.exports.createNewUser = async(req,res,next)=>{
     try{
+        console.log(req.body);
         const new_user = req.body;
         const user = await AdminModel.findOne({email:new_user.email})
     
@@ -47,6 +48,8 @@ module.exports.createNewUser = async(req,res,next)=>{
     }
 
 }
+
+
 
 getSignedToken = user => {
     return jwt.sign({ user }, Config.SECRET_KEY, { expiresIn: '1hr' });
